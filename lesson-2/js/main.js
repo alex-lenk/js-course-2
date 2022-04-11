@@ -1,15 +1,17 @@
+'use strict';
+
 class ProductList {
     constructor(container = '.products') {
         this.container = document.querySelector(container);
-        this._goods = [];
-        this._productsObjects = [];
+        this.goods = [];
+        this.productsObjects = [];
 
-        this._fetchGoods();
-        this._render();
+        this.fetchGoods();
+        this.render();
     }
 
-    _fetchGoods() {
-        this._goods = [
+    fetchGoods() {
+        this.goods = [
             {id: 1, title: 'Notebook', price: 20000},
             {id: 2, title: 'Mouse', price: 1500},
             {id: 3, title: 'Keyboard', price: 5000},
@@ -17,15 +19,19 @@ class ProductList {
         ];
     }
 
-    _render() {
-        for (const product of this._goods) {
+    render() {
+        for (const product of this.goods) {
             const productObject = new ProductItem(product);
             console.log(productObject);
 
-            this._productsObjects.push(productObject);
+            this.productsObjects.push(productObject);
             this.container.insertAdjacentHTML('beforeend', productObject.getHTMLString());
         }
     }
+
+  calcSum(){
+    return this.productsObjects.reduce((total, item) => total += item.price, 0);
+  }
 }
 
 class ProductItem {
@@ -49,6 +55,30 @@ class ProductItem {
 }
 
 const list = new ProductList();
+
+/**
+ * класс Cart с необходимым набором методов
+ */
+class Cart {
+  constructor() {
+    this.goods = [];
+    this.allProducts = [];
+  }
+
+  addCartItem(cartItem) {
+    this.goods.push(cartItem);
+  }
+
+  totalCartPrice() {
+    const totalPrice = document.getElementById('goods-list__total');
+    let sum = 0;
+    this.goods.forEach(good => {
+      sum += good.price
+    });
+    totalPrice.innerText = `Итого  ${sum} рублей`;
+  }
+}
+
 
 // const products = [
 //   {id: 1, title: 'Notebook', price: 20000},
