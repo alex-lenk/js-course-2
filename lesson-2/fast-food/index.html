@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Онлайн форма рассчитывающая стоимость и калорийность гамбургера</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 class="food__title">Расчёт стоимости и калорийности гамбургера</h1>
+
+<form class="food__form" action="#" id="app">
+  <div class="food__form-group">
+    <h4 class="food__form-title">Выбери размер:</h4>
+
+    <label class="food__form-label">
+      <input type="radio" name="size" value="big" data-cost="500" data-calory="200" checked>
+      большой (500 рублей, 200 калорий)
+    </label>
+
+    <label class="food__form-label">
+      <input type="radio" name="size" value="small" data-cost="250" data-calory="100" >
+      маленький (250 рублей, 100 калорий)
+    </label>
+  </div>
+
+  <div class="food__form-group">
+    <h4 class="food__form-title">Выбери начинку:</h4>
+
+    <label class="food__form-label">
+      <input type="radio" name="stuffings" value="cheese" data-cost="30" data-calory="40" checked>
+      с сыром (+30 рублей, +40 калорий)
+    </label>
+    <label class="food__form-label">
+      <input type="radio" name="stuffings" value="salad" data-cost="25" data-calory="1">
+      с салатом (+25 рублей, +1 калорий)
+    </label>
+    <label class="food__form-label">
+      <input type="radio" name="stuffings" value="potato" data-cost="35" data-calory="15">
+      с картофелем (+35 рублей, +15 калорий)
+    </label>
+  </div>
+
+  <div class="food__form-group">
+    <h4 class="food__form-title">Выбери дополнительно:</h4>
+
+    <label class="food__form-label">
+      <input type="checkbox" name="additions" value="condiment" data-cost="20" data-calory="0">
+      посыпать приправой (+20 рублей, +0 калорий)
+    </label>
+    <label class="food__form-label">
+      <input type="checkbox" name="additions" value="mayo" data-cost="35" data-calory="79">
+      полить майонезом (+35 рублей, +79 калорий)
+    </label>
+  </div>
+
+  <button class="food__btn" id="calculate">Рассчитать</button>
+</form>
+
+<div id="burgers" class="food__result"></div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
