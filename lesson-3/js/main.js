@@ -1,18 +1,28 @@
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
-let getRequest = (url, cb) => { // не fetch
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4) {
-      if (xhr.status !== 200) {
-        console.log('Error');
-      } else {
-        cb(xhr.responseText);
+/**
+ * @function
+ * @name getRequest
+ * @desc функция принимает JSON файл
+ * @param {url} url - JSON-server
+ * @returns {Promise}
+ */
+let getRequest = (url) => {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `${API}${url}`);
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === xhr.DONE) {
+        if (xhr.status !== 200) {
+          reject('Error');
+        }
+        resolve(JSON.parse(xhr.responseText));
       }
     }
-  };
-  xhr.send();
+
+    xhr.send();
+  });
 };
 
 class ProductList {
@@ -59,6 +69,53 @@ class ProductList {
       this.container.insertAdjacentHTML('beforeend', productObject.getHTMLString());
     }
   }
+
+  // Добавление товара в корзину
+  addItemToCart(id) {
+    const cartProducts = fromCookie('cart');
+
+    if (cartProducts) {
+      const cartItemIndex = cartProducts.findIndex(el => el.id === id);
+
+      if (cartItemIndex !== -1) {
+        // Если товар уже есть в корзине, увеличиваем его кол-во
+        cartProducts[cartItemIndex]['quantity'] = cartProducts[cartItemIndex]['quantity'] += 1;
+        toCookie("cart", cartProducts);
+      } else {
+        // Если товара нет в к корзине, добавляем его в корзину
+        cartProducts.push({'id': id, 'quantity': 1});
+        toCookie("cart", cartProducts);
+      }
+    } else {
+      // Если еще нет добавленных товаров
+      let cart = [];
+      cart.push({'id': id, 'quantity': 1});
+      toCookie("cart", cart);
+    }
+
+    this.fetchGoods();
+  }
+
+  // Удаление товара из корзины
+  deleteItemFromCart(id) {
+    let cartProducts = fromCookie('cart');
+    cartProducts = cartProducts.filter(el => el.id !== id);
+    toCookie("cart", cartProducts);
+
+    this.fetchGoods();
+    this.render();
+  }
+}
+
+const toCookie = (name, value) => {
+  let cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+  document.cookie = cookie;
+}
+
+const fromCookie = (name) => {
+  let result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+  result && (result = JSON.parse(result[1]));
+  return result;
 }
 
 class ProductItem {
