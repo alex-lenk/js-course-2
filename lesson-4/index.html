@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>Решил первое и второе задание</h2>
+
+<div class="content">
+  'Одинарные кавычки нужно заменить на двойные'
+  кроме don't isn't doesn't didn't
+  'Одинарные кавычки нужно заменить на двойные'
+  кроме don't isn't doesn't didn't
+  'Одинарные кавычки нужно заменить на двойные'
+  кроме don't isn't doesn't didn't
+</div>
+
+<script>
+  const textBlock = document.querySelector('.content');
+  const text = textBlock.innerText;
+  textBlock.innerText = text.replace(/\B'|'\B/g, '"');
+</script>
+</body>
+</html>
