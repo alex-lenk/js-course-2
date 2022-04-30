@@ -18,7 +18,8 @@ const app = new Vue({
       return fetch(url)
         .then(result => result.json())
         .catch(error => {
-          console.log(error);
+          console.log('Error alert:');
+          this.$refs.error.setError(error);
         })
     },
     addProduct(product) {

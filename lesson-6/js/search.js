@@ -1,28 +1,17 @@
 Vue.component('search', {
-  props: ['value'],
+  name: 'search',
   template: `
-            <div class="search-form">
-                <input type="text" class="search-field"  v-model="searchLine" @keydown="alsoFilter($event)">
-                <button class="btn-search" type="submit" @click="filterGoods()">
-                    <i class="fas fa-search"></i>все
-                </button>
-            </div>
-    `,
-  data: () => ({
-    searchLine: '',
-  }),
-  methods: {
-    alsoFilter(event) {
-      if (event.keyCode === 13) {
-        this.filterGoods();
-      }
-    },
-    filterGoods() {
-      this.$emit('search', this.searchLine);
-    },
-    filter() {
-      let regexp = new RegExp(this.searchLine, 'i');
-      this.filtered = this.products.filter(el => regexp.test(el.product_name));
-    },
-  }
-})
+<form action="#" class="search-form" @submit.prevent="$root.filter()">
+  <input type="text"
+  class="search-field"
+  v-model.trim="$root.searchLine"
+  @keypress.enter="$root.filter()"
+  placeholder="поиск"
+  >
+
+  <button class="btn-search" type="submit">
+     <i class="fas fa-search"></i> искать
+  </button>
+</form>
+`
+});
