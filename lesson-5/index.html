@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo">{{searchLine}} Интернет-магазин</div>
+    <div class="cart">
+      <form action="#" class="search-form">
+        <input type="text" class="search-field" v-model="searchLine">
+
+        <button class="btn-search" type="submit" @click.prevent="FilterGoods">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <button class="btn-cart" type="button" >Корзина</button>
+    </div>
+  </header>
+  <main>
+    <div class="products">
+      <div class="product-item" v-for="product of products" :key="product.id_product">
+        <img :src="imgCatalog" alt="Some img">
+        <div class="desc">
+          <h3>{{product.product_name}}</h3>
+          <p>{{product.price}}₽</p>
+          <button class="buy-btn" @click="addProduct(product)">Купить</button>
+        </div>
+      </div>
+
+      <section class="goods-list">
+        <template v-if="!products.length">
+          <h3 class="goods-null">Нет данных / Товары не найдены</h3>
+        </template>
+      </section>
+    </div>
+  </main>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
