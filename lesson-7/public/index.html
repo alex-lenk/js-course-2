@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Онлайн-витрина</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="pt-3 pb-3 mb-5 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="./assets/img/icons.svg#bootstrap"></use>
+          </svg>
+          <span class="fs-4">Онлайн-витрина</span>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></a></li>
+          <li>
+            <a href="./catalog.html" class="nav-link px-2 link-secondary">Каталог</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-dark">О компании</a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-dark">Контакты</a>
+          </li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <cart ref="cart"></cart>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <error ref="error"></error>
+
+    <h1 class="mb-4">Каталог товаров</h1>
+
+    <catalog ref="catalog" :length="10"></catalog>
+  </main>
+
+  <footer class="container pb-4 pt-3 d-flex align-items-center">
+    <p>Все права сохранены! {{localeDate}}</p>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./assets/js/components/cart.js"></script>
+<script src="./assets/js/components/catalog.js"></script>
+<script src="./assets/js/components/error.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
