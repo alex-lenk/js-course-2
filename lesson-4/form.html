@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Form validation</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    .form {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      width: 100%;
+      max-width: 960px
+    }
+  </style>
+</head>
+<body>
+<form class="form js-form" action="#">
+  <div class="row">
+    <div class="mb-3 col-md-6">
+      <label for="input-name" class="form-label">Имя</label>
+      <input type="text" name="name" class="form-control" id="input-name">
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="input-tel" class="form-label">Телефон</label>
+      <input type="text" name="phone" class="form-control" id="input-tel" placeholder="+7(000)000-0000">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mb-3 col-md-6">
+      <label for="input-email" class="form-label">Email address</label>
+      <input type="email" name="email" class="form-control" id="input-email">
+    </div>
+    <div class="mb-3 col-md-6">
+      <label for="input-message" class="form-label">Введите сообщение</label>
+      <input type="text" name="text" class="form-control" id="input-message">
+    </div>
+  </div>
+
+  <button type="submit" class="btn-secondary btn">Отправить</button>
+</form>
+
+<script src="form.js"></script>
+</body>
+</html>
