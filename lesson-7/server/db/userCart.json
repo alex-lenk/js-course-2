@@ -1,0 +1,30 @@
+[
+  {
+    "quantity": 1,
+    "id": 4,
+    "title": "Томаты",
+    "price": 199,
+    "meas": "кг"
+  },
+  {
+    "quantity": 1,
+    "id": 3,
+    "title": "Бутылка воды",
+    "price": 75,
+    "meas": "шт"
+  },
+  {
+    "quantity": 2,
+    "id": 7,
+    "title": "Спагетти",
+    "price": 75,
+    "meas": "уп"
+  },
+  {
+    "quantity": 1,
+    "id": 12,
+    "title": "Паста",
+    "price": 74,
+    "meas": "уп"
+  }
+]

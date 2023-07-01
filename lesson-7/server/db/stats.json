@@ -1,0 +1,249 @@
+[
+    {
+        "time": "02 May 2022, 9:45:47 am",
+        "product_title": "Помидор",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 9:45:49 am",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 9:45:54 am",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 9:45:54 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 9:45:54 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 9:45:55 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 10:46:32 am",
+        "product_title": "Майонез",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 10:46:33 am",
+        "product_title": "Бутылка воды",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 10:46:35 am",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 10:46:42 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 10:46:44 am",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 10:46:44 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:06:37 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:06:41 am",
+        "product_title": "Помидор",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:11:07 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:11:19 am",
+        "product_title": "Помидор",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:11:22 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:12:50 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:12:50 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:12:51 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:12:51 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:12:51 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:13:26 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:13:29 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:14:20 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:18:08 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:18:11 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:20:10 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:20:14 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:20:17 am",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 11:20:23 am",
+        "product_title": "Чай",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:20:24 am",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 11:20:25 am",
+        "product_title": "Помидор",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:20:26 am",
+        "product_title": "Бутылка воды",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:25:52 am",
+        "product_title": "Йогурт",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 11:25:57 am",
+        "product_title": "Йогурт",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:05:19 pm",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 1:05:20 pm",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 1:05:20 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:05:20 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:05:21 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:05:22 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:05:23 pm",
+        "product_title": "Томаты",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:05:24 pm",
+        "product_title": "Бутылка воды",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:05:27 pm",
+        "product_title": "Молоко",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:11:53 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:11:54 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:11:54 pm",
+        "action": "change"
+    },
+    {
+        "time": "02 May 2022, 1:11:54 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:11:54 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:14:40 pm",
+        "product_title": "Брокколи",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:14:42 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:14:44 pm",
+        "product_title": "Томаты",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:14:44 pm",
+        "product_title": "Бутылка воды",
+        "action": "add"
+    },
+    {
+        "time": "02 May 2022, 1:14:51 pm",
+        "action": "remove"
+    },
+    {
+        "time": "02 May 2022, 1:17:09 pm",
+        "action": "remove"
+    }
+]

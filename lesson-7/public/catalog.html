@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Онлайн-маркет</title>
+
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
+	      rel="stylesheet">
+</head>
+<body>
+<div class="app center" id="app">
+	<header class="header">
+		<a href="./index.html" class="logo logo_header"><img src="./assets/img/icons/logo.svg" alt="" class="logo_img">Супермаркет</a>
+
+		<ul class="menu">
+			<li><a href="./catalog.html" class="menu_link">Каталог</a></li>
+			<li><a href="#" class="menu_link">О нас</a></li>
+			<li><a href="#" class="menu_link">Мне повезёт!</a></li>
+		</ul>
+
+		<cart ref="cart"></cart>
+	</header>
+
+	<main class="container">
+		<div class="filter container_block">
+			<filter-el></filter-el>
+		</div>
+		<div class="products container_block">
+			<h1 class="block_title">Каталог товаров</h1>
+
+			<catalog ref="catalog" :length="0"></catalog>
+		</div>
+	</main>
+	<footer class="footer">
+		<a href="#" class="logo"><img src="./assets/img/icons/logo.svg" alt="" class="logo_img">Супермаркет</a>
+		<p class="footer_text">Все права защищены! 2021</p>
+	</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./assets/js/components/cart.js"></script>
+<script src="./assets/js/components/catalog.js"></script>
+<script src="./assets/js/components/filter.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
